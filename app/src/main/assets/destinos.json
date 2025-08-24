@@ -1,0 +1,109 @@
+{
+  "destinos_turisticos": [
+    {
+      "nombre": "Baia do Sancho",
+      "pais": "Brasil",
+      "categoria": "Playas",
+      "descripcion": "Una de las playas más hermosas del mundo en Fernando de Noronha.",
+      "precio": 1200
+    },
+    {
+      "nombre": "Eagle Beach",
+      "pais": "Aruba",
+      "categoria": "Playas",
+      "descripcion": "Playa paradisíaca con aguas cristalinas y arena blanca.",
+      "precio": 800
+    },
+    {
+      "nombre": "El Nido",
+      "pais": "Filipinas",
+      "categoria": "Playas",
+      "descripcion": "Espectacular bahía con formaciones rocosas únicas.",
+      "precio": 600
+    },
+    {
+      "nombre": "Monte Everest",
+      "pais": "Nepal",
+      "categoria": "Montañas",
+      "descripcion": "La montaña más alta del mundo, desafío para montañistas.",
+      "precio": 35000
+    },
+    {
+      "nombre": "Mont Blanc",
+      "pais": "Francia",
+      "categoria": "Montañas",
+      "descripcion": "Pico más alto de los Alpes occidentales.",
+      "precio": 2500
+    },
+    {
+      "nombre": "Aconcagua",
+      "pais": "Argentina",
+      "categoria": "Montañas",
+      "descripcion": "La montaña más alta de América.",
+      "precio": 4000
+    },
+    {
+      "nombre": "Machu Picchu",
+      "pais": "Perú",
+      "categoria": "Ciudades Históricas",
+      "descripcion": "Antigua ciudadela inca en los Andes peruanos.",
+      "precio": 500
+    },
+    {
+      "nombre": "Roma",
+      "pais": "Italia",
+      "categoria": "Ciudades Históricas",
+      "descripcion": "La Ciudad Eterna con miles de años de historia.",
+      "precio": 900
+    },
+    {
+      "nombre": "Petra",
+      "pais": "Jordania",
+      "categoria": "Maravillas del Mundo",
+      "descripcion": "Ciudad arqueológica tallada en piedra rosada.",
+      "precio": 800
+    },
+    {
+      "nombre": "Gran Muralla China",
+      "pais": "China",
+      "categoria": "Maravillas del Mundo",
+      "descripcion": "Impresionante fortificación que se extiende por miles de kilómetros.",
+      "precio": 700
+    },
+    {
+      "nombre": "Taj Mahal",
+      "pais": "India",
+      "categoria": "Maravillas del Mundo",
+      "descripcion": "Mausoleo de mármol blanco, símbolo del amor eterno.",
+      "precio": 400
+    },
+    {
+      "nombre": "Pirámides de Giza",
+      "pais": "Egipto",
+      "categoria": "Maravillas del Mundo",
+      "descripcion": "Antiguas pirámides y la Gran Esfinge.",
+      "precio": 600
+    },
+    {
+      "nombre": "Amazonas",
+      "pais": "Brasil",
+      "categoria": "Selvas",
+      "descripcion": "La selva tropical más grande del mundo.",
+      "precio": 1500
+    },
+    {
+      "nombre": "Congo",
+      "pais": "República Democrática del Congo",
+      "categoria": "Selvas",
+      "descripcion": "Selva tropical africana con biodiversidad única.",
+      "precio": 2000
+    },
+    {
+      "nombre": "Borneo",
+      "pais": "Malasia",
+      "categoria": "Selvas",
+      "descripcion": "Isla con selvas tropicales y vida salvaje exótica.",
+      "precio": 1800
+    }
+  ]
+}
