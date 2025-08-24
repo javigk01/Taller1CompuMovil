@@ -5,7 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
-import com.example.taller1compumovil.Misc.loadJSON
+import com.example.taller1compumovil.Utils.Misc
 import com.example.taller1compumovil.databinding.ActivityExploreBinding
 import org.json.JSONObject
 
@@ -25,7 +25,7 @@ class ExploreActivity : AppCompatActivity() {
     private fun setupDestinationsList(categoria: String) {
         val destinos = arrayListOf<String>()
         val destinosCompletos = arrayListOf<JSONObject>()
-        val json = JSONObject(loadJSON.loadJSONFromAsset(this, "destinos.json"))
+        val json = JSONObject(Misc.loadJSONFromAsset(this, "destinos.json"))
         val destinosJson = json.getJSONArray("destinos_turisticos")
 
         for (i in 0 until destinosJson.length()) {
