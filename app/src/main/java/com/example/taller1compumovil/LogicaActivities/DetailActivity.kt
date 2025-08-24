@@ -17,7 +17,7 @@ class DetailActivity : AppCompatActivity() {
 
         val destinoJson = intent.getStringExtra("destino")
         setupDestinationDetails(destinoJson)
-        setupFavoriteButton()
+        setupFavoriteButton(destinoJson)
     }
 
     private fun setupDestinationDetails(destinoJson: String?) {
@@ -35,12 +35,27 @@ class DetailActivity : AppCompatActivity() {
         }
     }
 
-    private fun setupFavoriteButton() {
+    private fun setupFavoriteButton(destinoJson: String?) {
         binding.btnAddFavorite.setOnClickListener {
             try {
+                val jsonStr = destinoJson ?: return@setOnClickListener
+                val destino = JSONObject(jsonStr)
+                val nombre = destino.getString("nombre")
+
+                val yaExiste = MainActivity.favoritos.any { it.optString("nombre") == nombre }
+                if (!yaExiste)
+                {
+                    MainActivity.favoritos.add(destino)
+                    Toast.makeText(this, "Destino añadido a favoritos", Toast.LENGTH_SHORT).show()
+                }
+                else
+                {
+                    Toast.makeText(this, "Ya lo tenias en favoritos tontin", Toast.LENGTH_SHORT).show()
+                }
                 binding.btnAddFavorite.isEnabled = false
-                Toast.makeText(this, "Añadido a favoritos", Toast.LENGTH_SHORT).show()
-            } catch (e: Exception) {
+            }
+            catch (e: Exception)
+            {
                 Toast.makeText(this, "Error al añadir a favoritos", Toast.LENGTH_SHORT).show()
             }
         }

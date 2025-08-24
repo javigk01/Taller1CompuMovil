@@ -30,6 +30,12 @@
             android:name=".LogicaActivities.DetailActivity"
             android:exported="false" />
 
+        <activity
+            android:name=".LogicaActivities.FavoritesActivity" />
+
+        <activity
+            android:name=".LogicaActivities.RecomendationsActivity" />
+
 
     </application>
 

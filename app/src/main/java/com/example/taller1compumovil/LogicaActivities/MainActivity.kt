@@ -6,6 +6,7 @@ import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
 import com.example.taller1compumovil.R
 import com.example.taller1compumovil.databinding.ActivityMainBinding
+import org.json.JSONObject
 
 class MainActivity : AppCompatActivity() {
 
@@ -26,6 +27,10 @@ class MainActivity : AppCompatActivity() {
         binding.spinnerCategories.adapter = adapter
     }
 
+    companion object {
+        val favoritos = mutableListOf<JSONObject>()
+    }
+
     private fun setupButtons() {
         binding.btnExplore.setOnClickListener {
             val selectedCategory = binding.spinnerCategories.selectedItem.toString()
@@ -33,5 +38,14 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("categoria", selectedCategory)
             startActivity(intent)
         }
+
+        binding.btnFavorites.setOnClickListener {
+            startActivity(Intent(this, FavoritesActivity::class.java))
+        }
+
+        binding.btnRecommendations.setOnClickListener {
+            startActivity(Intent(this, RecomendationsActivity::class.java))
+        }
+
     }
 }
