@@ -10,7 +10,7 @@ class DetailActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityDetailBinding
 
-    // 🔑 Mapa de destinos → ciudades reconocidas por OpenWeather
+
     private val mapaCiudades = mapOf(
         "Baia do Sancho" to "Fernando de Noronha",
         "Eagle Beach" to "Oranjestad",
@@ -85,7 +85,7 @@ class DetailActivity : AppCompatActivity() {
         val url = "https://api.openweathermap.org/data/2.5/weather?q=$ciudad&appid=$apiKey&units=metric&lang=es"
 
 
-        println("🌍 URL clima: $url")
+
 
         Thread {
             try {
