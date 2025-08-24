@@ -1,9 +1,10 @@
-package com.example.taller1compumovil
+package com.example.taller1compumovil.LogicaActivities
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
+import com.example.taller1compumovil.R
 import com.example.taller1compumovil.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

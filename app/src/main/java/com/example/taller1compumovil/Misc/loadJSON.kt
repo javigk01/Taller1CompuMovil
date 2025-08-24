@@ -1,9 +1,9 @@
-package com.example.taller1compumovil
+package com.example.taller1compumovil.Misc
 
 import android.content.Context
 import java.io.IOException
 
-object Misc {
+object loadJSON {
     fun loadJSONFromAsset(context: Context, fileName: String): String {
         return try {
             val inputStream = context.assets.open(fileName)

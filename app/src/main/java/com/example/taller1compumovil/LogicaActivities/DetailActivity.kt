@@ -1,4 +1,4 @@
-package com.example.taller1compumovil
+package com.example.taller1compumovil.LogicaActivities
 
 import android.os.Bundle
 import android.widget.Toast

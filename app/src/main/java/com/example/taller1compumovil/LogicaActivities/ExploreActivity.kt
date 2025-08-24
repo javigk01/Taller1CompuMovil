@@ -1,11 +1,11 @@
-package com.example.taller1compumovil
+package com.example.taller1compumovil.LogicaActivities
 
+import android.R
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
-import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
+import com.example.taller1compumovil.Misc.loadJSON
 import com.example.taller1compumovil.databinding.ActivityExploreBinding
 import org.json.JSONObject
 
@@ -25,7 +25,7 @@ class ExploreActivity : AppCompatActivity() {
     private fun setupDestinationsList(categoria: String) {
         val destinos = arrayListOf<String>()
         val destinosCompletos = arrayListOf<JSONObject>()
-        val json = JSONObject(Misc.loadJSONFromAsset(this, "destinos.json"))
+        val json = JSONObject(loadJSON.loadJSONFromAsset(this, "destinos.json"))
         val destinosJson = json.getJSONArray("destinos_turisticos")
 
         for (i in 0 until destinosJson.length()) {
@@ -36,7 +36,7 @@ class ExploreActivity : AppCompatActivity() {
             }
         }
 
-        val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, destinos)
+        val adapter = ArrayAdapter(this, R.layout.simple_list_item_1, destinos)
         binding.listaDestinos.adapter = adapter
         setupListClickListener(destinosCompletos)
     }
