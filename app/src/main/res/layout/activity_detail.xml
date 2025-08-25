@@ -69,13 +69,16 @@
         android:id="@+id/txt_clima"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Clima: ..."
-        android:textSize="16sp"
+        android:text="Clima: "
         android:textAlignment="center"
-        app:layout_constraintTop_toBottomOf="@+id/txt_precio"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/btn_add_favorite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_precio"
+        app:layout_constraintVertical_bias="0.0" />
+
     <Button
         android:id="@+id/btn_add_favorite"
         android:layout_width="match_parent"

@@ -49,7 +49,6 @@ class DetailActivity : AppCompatActivity() {
                 binding.txtDescripcion.text = destino.getString("descripcion")
                 binding.txtPrecio.text = "USD ${destino.getInt("precio")}"
 
-                // 🔎 Buscar ciudad válida en el mapa, si no existe usar el nombre tal cual
                 val destinoNombre = destino.getString("nombre")
                 val ciudad = mapaCiudades[destinoNombre] ?: destinoNombre
                 getWeather(ciudad)
@@ -71,7 +70,7 @@ class DetailActivity : AppCompatActivity() {
                     MainActivity.favoritos.add(destino)
                     Toast.makeText(this, "Destino añadido a favoritos", Toast.LENGTH_SHORT).show()
                 } else {
-                    Toast.makeText(this, "Ya lo tenías en favoritos", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Ya lo tenías en favoritos tontin", Toast.LENGTH_SHORT).show()
                 }
                 binding.btnAddFavorite.isEnabled = false
             } catch (e: Exception) {
@@ -81,10 +80,8 @@ class DetailActivity : AppCompatActivity() {
     }
 
     private fun getWeather(ciudad: String) {
-        val apiKey = "8bcf9aad58c4635a81e9d0048550425f" // tu API Key
+        val apiKey = "8bcf9aad58c4635a81e9d0048550425f"
         val url = "https://api.openweathermap.org/data/2.5/weather?q=$ciudad&appid=$apiKey&units=metric&lang=es"
-
-
 
 
         Thread {
